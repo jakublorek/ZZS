@@ -17,10 +17,8 @@ int main(int argc, char* argv[])
     HexEncoder encoder(new FileSink(std::cout));
 
     SecByteBlock key(AES::DEFAULT_KEYLENGTH);
-    //SecByteBlock iv(AES::BLOCKSIZE);
 
     prng.GenerateBlock(key, key.size());
-   // prng.GenerateBlock(iv, iv.size());
 
     string original_file("input.bin");
     string encrypted_file("wynik.bin");
