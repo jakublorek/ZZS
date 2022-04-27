@@ -70,8 +70,8 @@ int main(int argc, char* argv[])
         FileSource s(encrypted_file.c_str(), true,
             new StreamTransformationFilter(d,
                 new FileSink(decrypted_file.c_str())
-            ) // StreamTransformationFilter
-        ); // StringSource
+            ) 
+        );
         auto end = std::chrono::high_resolution_clock::now();
         auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - begin);
         printf("Decryption time: %.3f seconds.\n", elapsed.count() * 1e-9);
